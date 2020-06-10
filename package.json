@@ -1,0 +1,18 @@
+{
+  "name": "telegram-bot",
+  "version": "0.0.1",
+  "description": "telegram-bot prueba",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "6rak0",
+  "license": "ISC",
+  "dependencies": {
+    "nintendo-switch-eshop": "^3.0.1",
+    "telegraf": "^3.38.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
