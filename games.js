@@ -1,9 +1,9 @@
-const { getGamesAmerica, getPrices } = require('nintendo-switch-eshop');
+const { getGamesAmerica, getPrices } = require('nintendo-switch-eshop')
 
 async function getDiscounted() {
-  const allGames = await getGamesAmerica();
+  const allGames = await getGamesAmerica()
   const prices = allGames.map(async game => {
-    await getPrices('MX', game.nsuid);
+    await getPrices('MX', game.nsuid)
   });
 
   console.log(prices);
@@ -14,7 +14,7 @@ async function getDiscounted() {
   //   let data = await getPrices('MX', game.nsuid);
   //   data = data.prices[0];
   //   console.log(data);
-  // });
+  // })
 }
 
-getDiscounted();
+getDiscounted()
