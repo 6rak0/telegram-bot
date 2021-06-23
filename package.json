@@ -1,21 +1,16 @@
 {
   "name": "telegram-bot",
-  "version": "0.0.1",
-  "description": "telegram-bot prueba",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
+  "version": "0.0.5",
+  "description": "telegram-bot",
+  "main": "bot.js",
   "author": "6rak0",
   "license": "ISC",
   "dependencies": {
-    "nintendo-switch-eshop": "^3.0.1",
+    "@supabase/supabase-js": "^1.15.0",
     "telegraf": "^3.38.0"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
-    "eslint": "^7.7.0",
-    "eslint-config-prettier": "^6.11.0",
     "nodemon": "^2.0.4"
   }
 }
