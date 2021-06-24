@@ -1,7 +1,7 @@
 {
   "name": "telegram-bot",
-  "version": "0.0.5",
-  "description": "telegram-bot",
+  "version": "0.0.6",
+  "description": "telegram-bot de quijotemx",
   "main": "bot.js",
   "author": "6rak0",
   "license": "ISC",
