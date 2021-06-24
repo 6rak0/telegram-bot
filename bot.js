@@ -1,16 +1,22 @@
 require('dotenv').config()
+const fs = require('fs')
 const { Telegraf } = require('telegraf')
-const { getCommand } = require('./commands')
-const { getAction } = require('./actions')
 
 bot = new Telegraf(process.env.BOT_TOKEN)
 
-bot.command('test', getCommand('test'))
-bot.command('borrar', getCommand('borrar'))
-bot.command('ubicacion', getCommand('ubicacion'))
-bot.command('programar', getCommand('programar'))
-
-bot.action('date', getAction('date'))
-bot.action('slot', getAction('slot'))
+const commandFiles = fs
+  .readdirSync('./commands')
+  .filter(file => file.endsWith('.js'))
+commandFiles.forEach(file => {
+  const command = require(`./commands/${file}`)
+  command(bot)
+})
+const actionFiles = fs
+  .readdirSync('./actions')
+  .filter(file => file.endsWith('.js'))
+actionFiles.forEach(file => {
+  const action = require(`./actions/${file}`)
+  action(bot)
+})
 
 bot.launch()
